@@ -54,9 +54,9 @@ class _HomePageState extends State<HomePage> {
   void startTimer(){
     _timer = Timer.periodic(Duration(seconds: 3), (timer){
       if(_pageController.page == imagees.length-1){
-        _pageController.animateToPage(0, duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
+        _pageController.animateToPage(0, duration: Duration(milliseconds: 300), curve: Curves.easeInOut);
       }else{
-        _pageController.nextPage(duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
+        _pageController.nextPage(duration: Duration(milliseconds: 300), curve: Curves.easeInOut);
       }
     });
   }
@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Center(
                   child: SizedBox(
-                    width: 328,
+                    width:450,
                     height: 180,
                   
                     child: PageView.builder(
@@ -238,7 +238,7 @@ class _HomePageState extends State<HomePage> {
                  Container(
                   height: 470,
                    child: GridView.builder(
-                  
+                  physics: NeverScrollableScrollPhysics(),
                                    gridDelegate: const   SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2
                     ),

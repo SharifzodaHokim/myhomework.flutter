@@ -33,6 +33,7 @@ class _CoursesState extends State<Courses> {
         title: Text("Курсы",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
         actions: [
           Padding(
+          
             padding: const EdgeInsets.only(right: 30),
             child: Icon(Icons.notifications_outlined),
           ),
@@ -44,7 +45,7 @@ class _CoursesState extends State<Courses> {
                   height: 600,
                    child: GridView.builder(
                     
-                  
+                
                                    gridDelegate: const   SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2
                     ),
